@@ -15,6 +15,8 @@ void time(int& seconds){
   int hours;
   int mins;
   int secs;
+  cout << "Enter the time in seconds :" << endl;
+  
   cin >> seconds;
   
   if (seconds >= 3600)
