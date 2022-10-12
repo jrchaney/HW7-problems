@@ -11,6 +11,10 @@ void TranslatePick(int flag_who, char selection);
 char ComputerSelectRPSLK();
 void DetermineWinner (char userPick, char computerPick);
 string Wrand ();
+
+char RPSLK[5] = {'R', 'P', 'S', 'L', 'K'};
+
+
 int main() {
 
   
@@ -22,20 +26,20 @@ char computerPick; // randomly selected computer selection for
 // game
 // Display rules of the game.
 cout << "It's time to play Rock, Paper, Scissors, Lizard, Spock!" << endl;
-cout << "Use R (for Rock), P (for Paper), S (for Scissors), ";
+cout << "Type R (for Rock), P (for Paper), S (for Scissors), ";
 cout << "L (for Lizard), and K (for Spock)." << endl;
 // Obtain userPick. Prompt until a valid selection is made.
 while (valid_pick == false)
 {
-cout << "You pick: ";
-cin >> userPick;
-if ( (userPick == 'R') || (userPick == 'P') || (userPick == 'S' ) ||
-(userPick == 'L') || (userPick == 'K') )
-{
-valid_pick = true;
-}
-else
-cout << "Invalid Selection. Try again. " << endl;
+  cin >> userPick;
+  for (int i = 0; i < 5; i++){
+    if (userPick == RPSLK[i]){
+    valid_pick = true;
+    }
+    }
+    if (valid_pick == false){
+      cout << "Invalid Selection. Try again. " << endl;
+    }
 }
 // Repeat selection back to user.
 TranslatePick(0, userPick);

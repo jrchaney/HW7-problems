@@ -2,12 +2,15 @@
 
 using namespace std;
 
+
+// code does not work in kattis but sorts code by frequency and outputs the frequency of values in an array
+
 int sortbyFreq(int list[], int listSize) {
 
-  int maxE = 9;
+  int maxE = 1000;
   // cin >> maxE;  max element in array
 
-  int freq[9 + 1] = {0}; // frequency array
+  int freq[1000 + 1] = {0}; // frequency array
 
   for (int i = 0; i < listSize; i++) { // update the frequency array as elements
                                        // occur in the list[] array
@@ -65,9 +68,11 @@ int main() {
     // Traversing till frequency
     // to print value at index i
     for (int j = 0; j < frequency; j++) {
-      // cout << value << ' ';
+      //cout << value << ' ';
 
       cout << " frequency when value is " << value << ": " << frequency << endl;
+
+      //cout << value << " ";
     }
   }
 
